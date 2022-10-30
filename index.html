@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+      <title>JS SIMPLE CALCULATOR</title>
+  </head>
+ <body>
+    <div class="Wrapper"> 
+     <div class="Container">
+     <h1><input type="text" colspan="3" id="result" class="header"/></h1>
+      <p class="btns1"><input type="button" onclick="clr()" value="CLR"/></p>
+   <table class="buttons">
+      <tr>
+       <td class="btns"><input type="button" onclick="dis('7')" value="7" /></td>
+       <td class="btns"><input type="button" onClick="dis('8')" value="8" /></td>
+       <td class="btns"><input type="button" onClick="dis('9')" value="9" /></td>
+       <td class="btns"><input type="button" onClick="dis('+')" value="+" /></td>
+   </tr>
+     <tr>
+      <td class="btns"><input type="button" onClick="dis(4)"    value="4" /></td>
+      <td class="btns"><input type="button" onClick="dis(5)" value="5" /></td>
+      <td class="btns"><input type="button" onClick="dis(6)"    value="6" /></td>
+      <td class="btns"><input type="button" onClick="dis('-')"  value="-" /></td>
+</tr> 
+<tr>
+      <td class="btns"><input type="button" onClick="dis(1)"    value="1" /></td>
+      <td class="btns"><input type="button" onClick="dis(2)"    value="2" /></td>
+      <td class="btns"><input type="button" onClick="dis(3)"    value="3" /></td>
+      <td class="btns"><input type="button" onClick="dis('*')"  value="*" /></td>
+</tr>
+     <tr>  
+      <td class="btns"><input type="button"  onClick="dis(0)"     value="0" /></td>
+      <td class="btns"><input type="button"  onClick="dis('.')"   value="." /></td>
+      <td class="btns1"><input type="button" onclick="solve()"  value="=" /></td>
+      <td class="btns"><input type="button"  onClick="dis('/')" value="/" /></td>
+  </tr>
+  </table>
+ </div>
+</div>
+
+ <script>
+   //function for displaying values :
+function dis(val) {
+     document.getElementById("result").value += val;
+} 
+
+
+//function for evaluation :
+function solve() {
+   let x = document.getElementById("result").value
+   let y = eval(x)
+  document.getElementById("result").value = y;
+
+}
+
+//function for clearing the display :
+function clr() {
+    document.getElementById("result").value = "";
+}
+
+
+ </script>
+</body>
+</html>
